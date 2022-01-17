@@ -45,22 +45,30 @@ sam()
 
 
 def grade():
-    gr = input("Enter your grade: {0, 1.0} ")
-    print("Enter garde: " + str(gr))
-    gr = float(gr)
+    gra = input("enter grade: ")
 
-    if gr >= 0 and gr < 0.6:
-        print("F")
-    elif gr >= 0.6 and gr < 0.7:
-        print("D")
-    elif gr >= 0.7 and gr < 0.8:
-        print("C")
-    elif gr >= 0.8 and gr < 0.9:
-        print("B")
-    elif gr >= 0.9 and gr < 1.0:
-        print("A")
-    else:
-        print("bad score")
+    try:
+        gra = float(gra)
+
+        if gra < 0:
+            print("bad score: " + str(gra))
+        elif gra < 0.6:
+            print("F: " + str(gra))
+        elif gra < 0.7:
+            print("D: " + str(gra))
+        elif gra < 0.8:
+            print("C: " + str(gra))
+        elif gra < 0.9:
+            print("B: " + str(gra))
+        elif gra <= 1.0:
+            print("A: " + str(gra))
+        elif gra > 1.0:
+            print("bad score: " + str(gra))
+        else:
+            print("bad score: " + str(gra))
+    except:
+        print("bad score: " + str(gra))
+
 
 
 grade()
